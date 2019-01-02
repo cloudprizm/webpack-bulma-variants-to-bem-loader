@@ -1,0 +1,6 @@
+export const button: string;
+export const isLoading: string;
+export const spinAround: string;
+export const isFocused: string;
+export const isActive: string;
+export const icon: string;

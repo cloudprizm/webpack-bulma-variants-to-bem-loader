@@ -1,0 +1,9 @@
+export const navbarLink: string;
+export const isArrowless: string;
+export const navbar: string;
+export const navbarItem: string;
+export const hasDropdown: string;
+export const navbarDropdown: string;
+export const spinAround: string;
+// dataItem was lost for calendar
+export const dataItem: string

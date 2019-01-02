@@ -1,0 +1,6 @@
+export const isSize1: string;
+export const isSize2: string;
+export const isSize3: string;
+export const isSize1Mobile: string;
+export const isSize2Mobile: string;
+export const isSize3Mobile: string;

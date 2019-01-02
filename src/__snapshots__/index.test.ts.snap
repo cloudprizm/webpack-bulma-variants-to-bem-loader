@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`combine all variants to one type - when some of keys if missing 1`] = `"type All = Modifiers"`;
+
+exports[`combine all variants to one type 1`] = `"type All = Elements | Block | Modifiers | Others"`;
+
+exports[`convert array to union types 1`] = `
+Object {
+  "block": "type Block = \\"navbar\\"",
+  "elements": "type Elements = \\"navbarLink\\" | \\"navbarItem\\" | \\"navbarDropdown\\"",
+  "modifiers": "type Modifiers = \\"isArrowless\\" | \\"hasDropdown\\"",
+  "others": "type Others = \\"spinAround\\" | \\"dataItem\\"",
+}
+`;
+
+exports[`export all segregated types as TS union types 1`] = `
+Array [
+  "export type Elements = \\"navbarLink\\" | \\"navbarItem\\" | \\"navbarDropdown\\"",
+  "export type Block = \\"navbar\\"",
+  "export type Modifiers = \\"isArrowless\\" | \\"hasDropdown\\"",
+  "export type All = Elements | Block | Modifiers",
+]
+`;
+
+exports[`get all bem styles as well as these which were not recognized 1`] = `
+Object {
+  "block": Array [
+    "navbar",
+  ],
+  "elements": Array [
+    "navbarLink",
+    "navbarItem",
+    "navbarDropdown",
+  ],
+  "modifiers": Array [
+    "isArrowless",
+    "hasDropdown",
+  ],
+  "others": Array [
+    "spinAround",
+    "dataItem",
+  ],
+}
+`;
+
+exports[`resolve variants, modifiers and elements from exports 1`] = `
+Object {
+  "block": Array [
+    "navbar",
+  ],
+  "elements": Array [
+    "navbarLink",
+    "navbarItem",
+    "navbarDropdown",
+  ],
+  "modifiers": Array [
+    "isArrowless",
+    "hasDropdown",
+  ],
+}
+`;
+
+exports[`when there is not elements 1`] = `
+Array [
+  "export type Block = \\"button\\" | \\"icon\\"",
+  "export type Modifiers = \\"isLoading\\" | \\"isFocused\\" | \\"isActive\\"",
+  "export type All = Block | Modifiers",
+]
+`;

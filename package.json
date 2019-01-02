@@ -1,0 +1,23 @@
+{
+  "name": "@hungry/webpack-bulma-variants-to-bem-loader",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "license": "TBD",
+  "sideEffects": false,
+  "babel": {
+    "presets": [
+      "@hungry/cli"
+    ]
+  },
+  "dependencies": {
+    "loader-utils": "^1.1.0",
+    "schema-utils": "^1.0.0",
+    "typings-for-css-modules-loader": "^1.7.0"
+  },
+  "homepage": "https://github.com/damianbaar/catch-the-sun/tree/master/packages/core/bulma-variants-to-sass",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damianbaar/catch-the-sun/tree/master/packages/core/bulma-variants-to-sass"
+  },
+  "private": false
+}
