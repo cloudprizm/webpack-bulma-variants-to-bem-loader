@@ -1,8 +1,33 @@
 `webpack-bulma-variants-to-sass-loader`
+====
 
-Webpack loader to export correct typings in `BEMish` manner.
-It is enriching `typings-for-css-modules-loader` and convert file to file like below,
+Webpack loader to export typings as `BEM` convention.
+This is enriching `typings-for-css-modules-loader` and override typings file to file like below. It is adding extra info about `block`, `modifiers` and `elements`. It is required to combine components with typings in any directions and apply overlay layer to augment "Cascading"CS behaviour.
 
+### Examples
+#### Exporting `navbar` to BEM
+```ts
+{
+  "block": [
+    "navbar",
+  ],
+  "elements": [
+    "navbarLink",
+    "navbarItem",
+    "navbarDropdown",
+  ],
+  "modifiers": [
+    "isArrowless",
+    "hasDropdown",
+  ],
+  "others": [
+    "spinAround",
+    "dataItem",
+  ],
+}
+```
+
+#### Exported file
 ```ts
 export const button: string;
 export const isLoading: string;
@@ -48,23 +73,45 @@ export default module
 
 ### component implementation
 ```ts
-import styled from 'styled-components'
 import {
   styledWithVariants,
   toStyledGenericFromStringOrJSX,
-  toStyledGenericFromStyledFunction
+  div
 } from '@hungry/sassy-react-component'
 
-import { WithModifiers, combineCSSWithModifiers } from './modifiers'
+import { combineCSSWithModifiers, WithModifiers } from './modifiers'
 
-import CSS, { BEM } from './Button.sass'
+import CSS, { BEM } from './Notification.sass'
 
-const withEmbeddedVariants =
+const asBulmaVariant =
   styledWithVariants<WithModifiers<BEM>>(
     combineCSSWithModifiers(CSS))
 
-export const makeButton = withEmbeddedVariants('button')
+const Block =
+  asBulmaVariant('notification')
+    (div)
 
-export const Button = makeButton(
-  toStyledGenericFromStringOrJSX('button'))
+const DeleteButton =
+  asBulmaVariant('button', 'isDelete', 'delete')
+    (toStyledGenericFromStringOrJSX('button'))
+
+const Title =
+  asBulmaVariant('title')
+    (div)
+
+const Subtitle =
+  asBulmaVariant('subtitle')
+    (div)
+
+const Content =
+  asBulmaVariant('content')
+    (div)
+
+export const Notification = {
+  Block,
+  DeleteButton,
+  Title,
+  Subtitle,
+  Content
+}
 ```
