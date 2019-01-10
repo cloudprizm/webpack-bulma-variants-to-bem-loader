@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/hungry-consulting/webpack-bulma-variants-to-bem-loader
+	branch = master
+	commit = c7bc7d7fde1bf2ea8b5638c4eb78516db35f95c4
+	method = merge
+	cmdver = 0.4.0
+	parent = 4b622ee6c2842c784b84b7a59c71e6bb8372baa2
