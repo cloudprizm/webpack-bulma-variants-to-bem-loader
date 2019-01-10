@@ -14,6 +14,18 @@
     "schema-utils": "^1.0.0",
     "typings-for-css-modules-loader": "^1.7.0"
   },
+  "devDependencies": {
+    "@hungry/babel-preset-cli": "^0.1.1",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@types/jest": "^23.3.12",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "concurrently": "^4.1.0",
+    "jest": "^23.6.0",
+    "typedoc": "^0.14.0",
+    "typescript": "^3.2.2"
+  },
   "homepage": "https://github.com/hungry-consulting/hungry-consulting/webpack-bulma-variants-to-bem-loader",
   "repository": {
     "type": "git",
