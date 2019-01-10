@@ -4,6 +4,8 @@
 Webpack loader to export typings as `BEM` convention.
 This is enriching `typings-for-css-modules-loader` and override typings file to file like below. It is adding extra info about `block`, `modifiers` and `elements`. It is required to combine components with typings in any directions and apply overlay layer to augment "Cascading"CS behaviour.
 
+[Docs](https://hungry-consulting.github.io/webpack-bulma-variants-to-bem-loader/index.html)
+
 ### Examples
 #### Exporting `navbar` to BEM
 ```ts
