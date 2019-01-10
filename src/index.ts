@@ -1,9 +1,8 @@
 import { readFileSync, writeFileSync } from 'fs'
 import { EOL } from 'os'
 import { basename } from 'path'
-import { getOptions } from 'loader-utils'
 import { mapWithKey, compact, reduce } from 'fp-ts/lib/Record'
-import { option, some, none } from 'fp-ts/lib/Option'
+import { some, none } from 'fp-ts/lib/Option'
 import { loader } from 'webpack'
 
 // INFO as parsing happen based on file from typings-for-css - need to keep the same filename
@@ -16,8 +15,8 @@ const exportsRegEx = /([a-z^A-Z0-9]*)(:|:\ )/g
 const getBulmaElements = (blockBEM: string) => new RegExp(`${blockBEM}[A-Z].*`)
 
 export const getExportKeys = (content: string, keyRegex = exportsRegEx) => {
-  let match
-  const keys = []
+  let match: RegExpExecArray | null
+  const keys: string[] = []
 
   while (match = keyRegex.exec(content)) {
     if (keys.indexOf(match[1]) < 0) {
@@ -28,7 +27,7 @@ export const getExportKeys = (content: string, keyRegex = exportsRegEx) => {
   return keys
 }
 
-const capitalize = (s) => {
+const capitalize = (s: string | unknown) => {
   if (typeof s !== 'string') return ''
   return s.charAt(0).toUpperCase() + s.slice(1)
 }
@@ -100,6 +99,10 @@ export const exportBEMTypes = (unionTypes: BulmaBEM) => {
     .map(d => `export ${d}`)
 }
 
+// TODO it has to be implemented to not overwrite file all the time
+// this really su**
+
+// @ts-ignore
 const compareWithBaseFileAndSaveIfChanged =
   (filename: string, content: string, enrichedContent: string) =>
     readFileSync(filename, 'utf-8') !== content
@@ -108,7 +111,6 @@ const compareWithBaseFileAndSaveIfChanged =
 export default function (this: loader.LoaderContext, content: string) {
   if (this.cacheable) this.cacheable()
 
-  const options = getOptions(this)
   const filePath = filenameToTypingsFilename(this.resourcePath)
   const sassExports = readFileSync(filePath, 'utf-8')
 

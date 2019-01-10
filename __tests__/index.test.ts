@@ -8,7 +8,7 @@ import {
   getExportKeys,
   exportBEMTypes,
   bulmaToBEM
-} from './index'
+} from '../src/index'
 
 const loadFile = (path: string) =>
   Fs.readFileSync(

@@ -1,8 +1,8 @@
 {
   "name": "@hungry/webpack-bulma-variants-to-bem-loader",
   "version": "0.0.1",
-  "main": "src/index.ts",
-  "license": "TBD",
+  "main": "dist/index.js",
+  "license": "MIT",
   "sideEffects": false,
   "babel": {
     "presets": [
@@ -14,10 +14,43 @@
     "schema-utils": "^1.0.0",
     "typings-for-css-modules-loader": "^1.7.0"
   },
-  "homepage": "https://github.com/damianbaar/catch-the-sun/tree/master/packages/core/bulma-variants-to-sass",
+  "homepage": "https://github.com/hungry-consulting/hungry-consulting/webpack-bulma-variants-to-bem-loader",
   "repository": {
     "type": "git",
-    "url": "https://github.com/damianbaar/catch-the-sun/tree/master/packages/core/bulma-variants-to-sass"
+    "url": "https://github.com/hungry-consulting/hungry-consulting/webpack-bulma-variants-to-bem-loader"
   },
-  "private": false
+  "private": false,
+  "scripts": {
+    "build:code": "babel src -d dist --extensions '.ts','.tsx'",
+    "prepublish": "yarn test && yarn build",
+    "test": "jest",
+    "build:declarations": "tsc --build tsconfig.json",
+    "build": "concurrently --names '@hungry/webpack-bulma-variants-to-bem-loader' 'yarn build:declarations' 'yarn build:code'",
+    "watch": "concurrently --names '@hungry/webpack-bulma-variants-to-bem-loader' 'yarn build:declarations --watch' 'yarn build:code --watch'",
+    "docs": "typedoc --out docs ./src/*.ts",
+    "archetype:update": "spell new library-os"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "typings": "dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/hungry-consulting/hungry-consulting/webpack-bulma-variants-to-bem-loader/issues",
+    "email": "damian.baar@gmail.com"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "babel-jest"
+    },
+    "testRegex": "/__tests__/.*\\.test\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
 }

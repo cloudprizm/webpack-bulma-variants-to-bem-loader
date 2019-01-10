@@ -1,0 +1,257 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@hungry/webpack-bulma-variants-to-bem-loader</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@hungry/webpack-bulma-variants-to-bem-loader</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> @hungry/webpack-bulma-variants-to-bem-loader</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="webpack-bulma-variants-to-sass-loader"><code>webpack-bulma-variants-to-sass-loader</code></h1>
+				<p>Webpack loader to export typings as <code>BEM</code> convention.
+				This is enriching <code>typings-for-css-modules-loader</code> and override typings file to file like below. It is adding extra info about <code>block</code>, <code>modifiers</code> and <code>elements</code>. It is required to combine components with typings in any directions and apply overlay layer to augment &quot;Cascading&quot;CS behaviour.</p>
+				<h3 id="examples">Examples</h3>
+				<h4 id="exporting-navbar-to-bem">Exporting <code>navbar</code> to BEM</h4>
+				<pre><code class="language-ts">{
+  <span class="hljs-string">"block"</span>: [
+    <span class="hljs-string">"navbar"</span>,
+  ],
+  <span class="hljs-string">"elements"</span>: [
+    <span class="hljs-string">"navbarLink"</span>,
+    <span class="hljs-string">"navbarItem"</span>,
+    <span class="hljs-string">"navbarDropdown"</span>,
+  ],
+  <span class="hljs-string">"modifiers"</span>: [
+    <span class="hljs-string">"isArrowless"</span>,
+    <span class="hljs-string">"hasDropdown"</span>,
+  ],
+  <span class="hljs-string">"others"</span>: [
+    <span class="hljs-string">"spinAround"</span>,
+    <span class="hljs-string">"dataItem"</span>,
+  ],
+}</code></pre>
+				<h4 id="exported-file">Exported file</h4>
+				<pre><code class="language-ts"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> button: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isLoading: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> spinAround: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isFocused: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isActive: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> icon: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isSmall: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isMedium: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isLarge: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isHovered: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isText: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isWhite: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isInverted: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isOutlined: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isBlack: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isLight: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isDark: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isPrimary: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isLink: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isInfo: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isSuccess: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isWarning: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isDanger: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isFullwidth: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isStatic: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isRounded: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> buttons: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> hasAddons: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isSelected: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isExpanded: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isCentered: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> isRight: <span class="hljs-built_in">string</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> Block = <span class="hljs-string">"button"</span> | <span class="hljs-string">"icon"</span> | <span class="hljs-string">"buttons"</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> Modifiers = <span class="hljs-string">"isLoading"</span> | <span class="hljs-string">"isFocused"</span> | <span class="hljs-string">"isActive"</span> | <span class="hljs-string">"isSmall"</span> | <span class="hljs-string">"isMedium"</span> | <span class="hljs-string">"isLarge"</span> | <span class="hljs-string">"isHovered"</span> | <span class="hljs-string">"isText"</span> | <span class="hljs-string">"isWhite"</span> | <span class="hljs-string">"isInverted"</span> | <span class="hljs-string">"isOutlined"</span> | <span class="hljs-string">"isBlack"</span> | <span class="hljs-string">"isLight"</span> | <span class="hljs-string">"isDark"</span> | <span class="hljs-string">"isPrimary"</span> | <span class="hljs-string">"isLink"</span> | <span class="hljs-string">"isInfo"</span> | <span class="hljs-string">"isSuccess"</span> | <span class="hljs-string">"isWarning"</span> | <span class="hljs-string">"isDanger"</span> | <span class="hljs-string">"isFullwidth"</span> | <span class="hljs-string">"isStatic"</span> | <span class="hljs-string">"isRounded"</span> | <span class="hljs-string">"hasAddons"</span> | <span class="hljs-string">"isSelected"</span> | <span class="hljs-string">"isExpanded"</span> | <span class="hljs-string">"isCentered"</span> | <span class="hljs-string">"isRight"</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> Others = <span class="hljs-string">"spinAround"</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> All = Block | Modifiers | Others
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> BEM = Record&lt;All, <span class="hljs-built_in">boolean</span>&gt;
+<span class="hljs-keyword">declare</span> <span class="hljs-keyword">let</span> <span class="hljs-keyword">module</span>: Record&lt;All, string&gt;
+export default <span class="hljs-keyword">module</span></code></pre>
+				<h3 id="component-implementation">component implementation</h3>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> {
+  styledWithVariants,
+  toStyledGenericFromStringOrJSX,
+  div
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@hungry/sassy-react-component'</span>
+
+<span class="hljs-keyword">import</span> { combineCSSWithModifiers, WithModifiers } <span class="hljs-keyword">from</span> <span class="hljs-string">'./modifiers'</span>
+
+<span class="hljs-keyword">import</span> CSS, { BEM } <span class="hljs-keyword">from</span> <span class="hljs-string">'./Notification.sass'</span>
+
+<span class="hljs-keyword">const</span> asBulmaVariant =
+  styledWithVariants&lt;WithModifiers&lt;BEM&gt;&gt;(
+    combineCSSWithModifiers(CSS))
+
+<span class="hljs-keyword">const</span> Block =
+  asBulmaVariant(<span class="hljs-string">'notification'</span>)
+    (div)
+
+<span class="hljs-keyword">const</span> DeleteButton =
+  asBulmaVariant(<span class="hljs-string">'button'</span>, <span class="hljs-string">'isDelete'</span>, <span class="hljs-string">'delete'</span>)
+    (toStyledGenericFromStringOrJSX(<span class="hljs-string">'button'</span>))
+
+<span class="hljs-keyword">const</span> Title =
+  asBulmaVariant(<span class="hljs-string">'title'</span>)
+    (div)
+
+<span class="hljs-keyword">const</span> Subtitle =
+  asBulmaVariant(<span class="hljs-string">'subtitle'</span>)
+    (div)
+
+<span class="hljs-keyword">const</span> Content =
+  asBulmaVariant(<span class="hljs-string">'content'</span>)
+    (div)
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Notification = {
+  Block,
+  DeleteButton,
+  Title,
+  Subtitle,
+  Content
+}</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_index_.html">"index"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
