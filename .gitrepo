@@ -6,7 +6,7 @@
 [subrepo]
 	remote = https://github.com/hungry-consulting/webpack-bulma-variants-to-bem-loader
 	branch = master
-	commit = 60b970cb04dcfd4a58df6d71b09401435066ef10
+	commit = d84e0d8a6b9bcf3602e7860196c964f8fc1397f8
 	method = merge
 	cmdver = 0.4.0
-	parent = b3b435ea2a9f444bd6c2d92e0ef07e456f6b1574
+	parent = 17d03cc9ab9598f08fb27560f3df481e03e8dda0
